@@ -21,14 +21,16 @@
 		<a href="/" class="main-header__logo">
 			<?php echo get_bloginfo( 'name' ); ?>
 		</a>
-		<?php joints_top_nav(); ?>
+		<div class="main-header__desktop-menu">
+			<?php joints_top_nav(); ?>
+		</div>
 	</div>
 
 	<div class="main-header__mobile-menu off-canvas-wrapper">
-		<a class="off-canvas-menu" data-toggle="mobileMenu"><i class="fas fa-bars"></i> Menu</a>
+		<a class="off-canvas-menu" data-toggle="mobileMenu"><i class="fas fa-bars"></i></a>
 		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 			<nav class="off-canvas position-right" id="mobileMenu" data-off-canvas data-position="right" role="mobile-navigation">
-				<a class="off-canvas-close" data-toggle="mobileMenu"><i class="fas fa-times"></i> Close</a>
+				<a class="off-canvas-close" data-toggle="mobileMenu"><i class="fas fa-times"></i></a>
 				<?php joints_top_nav(); ?>
 			</nav>
 		</div>

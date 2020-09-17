@@ -9,11 +9,12 @@
 		</a>
 	</div>
 	<div class="homepage-banner__media">
-		<?php
-			$image = get_field('banner_image');
-			$size = 'full';
-			echo wp_get_attachment_image( $image, $size );
-		?>
+			<?php $image = get_field('banner_image'); ?>
+			<picture class="homepage-slider__media">
+				<source media="(min-width:960px)" srcset="<?php echo esc_url($image['sizes'][ 'home-banner-desktop' ]); ?>">
+				<source media="(max-width:959px)" srcset="<?php echo esc_url($image['sizes'][ 'home-banner-mobile' ]); ?>">
+				<img src="<?php echo esc_url($image['url']); ?>">
+			</picture>
 	</div>
 </div>
 

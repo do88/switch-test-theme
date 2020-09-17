@@ -26,4 +26,4 @@ require_once(get_template_directory().'/functions/disable-gutenberg.php');
 require_once(get_template_directory().'/functions/button-shortcode.php');
 
 // Custom image sizes
-require_once(get_template_directory().'/functions/button-shortcode.php');
+require_once(get_template_directory().'/functions/custom-image-sizes.php');

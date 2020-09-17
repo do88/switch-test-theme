@@ -14,10 +14,6 @@
 		}
 	}
 
-	.page-container__content {
-		@include white-padding;
-	}
-
 	.page-container__content--news {
 		padding: 0;
 		background: none;

@@ -1,109 +1,21 @@
-// ---------------------- Homepage Slider
+// ---------------------- Homepage Banner
 
-.homepage-slider {
+.homepage-banner {
 	position: relative;
 	width: 100%;
+	min-height: 100vh;
 
-	.slick-arrow {
+	.homepage-banner__content {
 		z-index: 10;
 		position: absolute;
-		display: none !important;
-		align-items: center;
-		justify-content: center;
-		width: 35px;
-		height: 35px;
+		width: auto;
 		bottom: 50%;
-		background-color: #fff;
-		color: $color-primary;
-		transition: all 0.2s ease-in;
-
-		&:hover {
-			cursor: pointer;
-			background-color: lighten($color-primary, 55%);
-		}
-
-		&.slick-prev {
-			left: 20px;
-		}
-
-		&.slick-next {
-			right: 20px;
-		}
-
-		@include breakpoint(large) {
-			display: flex !important;
-		}
-	}
-
-	.slick-dots {
-		z-index: 10;
-		display: flex !important;
-		align-items: center;
-		position: absolute;
-		height: 35px;
-		bottom: 10px;
-		right: 50%;
-		transform: translateX(50%);
-		margin: 0;
-		list-style: none;
-
-		@include breakpoint(large) {
-			bottom: 20px;
-		}
-
-		li {
-			align-items: center;
-			justify-content: center;
-			background-color: #fff;
-			margin: 0 5px;
-			text-align: center;
-			color: $color-primary;
-
-			button {
-				width: 25px;
-				height: 25px;
-				font-size: 14px;
-				font-weight: 700;
-				color: inherit;
-			}
-
-			&:hover {
-				cursor: pointer;
-				background-color: lighten($color-primary, 55%);
-			}
-
-			&.slick-active {
-				background-color: $color-primary;
-				color: #fff;
-			}
-		}
-	}
-
-	.homepage-slider__item {
-		overflow: hidden;
-		position: relative;
-
-		@include breakpoint(large) {
-			max-height: 550px;
-		}
-	}
-
-	.homepage-slider__content {
+		left: 50%;
+		transform: translateX(-50%);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		position: absolute;
-		width: auto;
-		bottom: 12.5%;
-		z-index: 10;
-		left: 50%;
-		transform: translateX(-50%);
 		text-align: center;
-
-		@include breakpoint(large) {
-
-			bottom: 15%;
-		}
 
 		h2 {
 			display: inline-block;
@@ -137,16 +49,16 @@
 		}
 	}
 
-	.homepage-slider__media {
+	.homepage-banner__media {
 		display: block;
 		height: 0;
 		overflow: hidden;
-		padding-bottom: calc(600 / 1600 * 100%);
+		padding-bottom: calc(900 / 1600 * 100%);
 		background: white;
 		position: relative;
 
 		@media only screen and (max-width: 959px) {
-			padding-bottom: calc(960 / 960 * 100%);
+			padding-bottom: calc(1280 / 960 * 100%);
 		}
 
 		img {
@@ -164,7 +76,7 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			background-image: linear-gradient(to top, rgba(black, 0.5) 0%, rgba(black, 0) 50%);
+			background-image: linear-gradient(to top, rgba(#542727, 0.6) 0%, rgba(#542727, 0.6) 100%);
 		}
 	}
 }
