@@ -3,49 +3,48 @@
 .homepage-banner {
 	position: relative;
 	width: 100%;
-	min-height: 100vh;
 
 	.homepage-banner__content {
-		z-index: 10;
+		z-index: 2;
 		position: absolute;
 		width: auto;
-		bottom: 50%;
 		left: 50%;
-		transform: translateX(-50%);
+		top: 50%;
+		transform: translate(-50%, -50%);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+		width: clamp(300px, 80%, 600px);
 
-		h2 {
-			display: inline-block;
-			background: $color-primary;
-			padding: 10px;
+		h1 {
 			color: #fff;
-			font-size: 20px;
-			line-height: 1.25;
-			margin: 0;
+			font-size: 30px;
+			font-weight: bold;
+			line-height: 1;
+			margin: 0 0 20px;
+
 			@include breakpoint(medium) {
-				font-size: 24px;
+				font-size: 36px;
 			}
 			@include breakpoint(large) {
-				font-size: 32px;
-				padding: 20px 20px 30px;
-				// margin-left: -20px;
+				font-size: 56px;
+			}
+		}
+
+		h3 {
+			color: #fff;
+			font-size: 20px;
+			line-height: 1.5;
+			margin: 0 0 20px;
+
+			@include breakpoint(medium) {
+				font-size: 24px;
 			}
 		}
 
 		.button {
 			white-space: nowrap;
-			display: inline-block;
-			margin-top: 10px;
-			@include breakpoint(medium) {
-				font-size: 18px;
-			}
-			@include breakpoint(large) {
-				font-size: 20px;
-				margin-top: -20px;
-			}
 		}
 	}
 
@@ -71,7 +70,7 @@
 
 		&:after {
 			position: absolute;
-			z-index: 5;
+			z-index: 1;
 			content: '';
 			display: block;
 			width: 100%;
