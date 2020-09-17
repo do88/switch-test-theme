@@ -1,0 +1,31 @@
+@mixin constrained() {
+	width: 100%;
+	max-width: $global-max-width;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+@mixin white-padding() {
+	background-color: #fff;
+	padding: 15px;
+	@include breakpoint(large) {
+		padding: 30px;
+	}
+}
+
+// ---------------------- COLOURS
+
+$color-primary: #2f52a0;
+$color-background: #f3f5fa;
+$color-secondary: #476d17;
+
+// ---------------------- FONTS
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+$font-regular: 'Montserrat', sans-serif;
+
+// ---------------------- LAYOUT
+
+$global-max-width: 1100px;

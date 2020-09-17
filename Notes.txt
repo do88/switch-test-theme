@@ -1,0 +1,9 @@
+See below on how I would like this project to be set out:
+
+1. Use any local development tool of your choosing, ie wamp, mamp docker etc.
+2. The site must be built in Wordpress
+3. Advanced Custom Fields must be used and everything should be editable apart from the logo that you can hardcode as text
+4. The final version must also be responsive through major breakpoints. Monitor, laptop, tablet, mobile phone
+5. Sass must be used for stylesheets
+6. Images must be responsive as well as optimized. You can see that the images in the assets folder are way too large to be used in production.
+7. When completed, share the url with us as well as login details to WP Admin. You can host the website on any host of your choosing but for this scenario I would recommend going with 000webhost, its completely free!

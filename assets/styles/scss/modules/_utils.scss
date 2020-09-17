@@ -1,0 +1,116 @@
+// ---------------------- UTILITY CLASSES
+
+.centered {
+	text-align: center;
+}
+
+.constrained {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.absolute-center {
+	position: absolute;
+	z-index: 10;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// ---------------------- MARGINS
+
+.mb-s {
+	margin-bottom: 1rem;
+}
+.mb-m {
+	margin-bottom: 1.5rem;
+	@include breakpoint(medium) {
+		margin-bottom: 3rem;
+	}
+}
+.mb-l {
+	margin-bottom: 2rem;
+	@include breakpoint(medium) {
+		margin-bottom: 4rem;
+	}
+}
+.mb-xl {
+	margin-bottom: 4rem;
+	@include breakpoint(medium) {
+		margin-bottom: 8rem;
+	}
+}
+
+.mt-s {
+	margin-top: 1rem;
+}
+.mt-m {
+	margin-top: 1.5rem;
+	@include breakpoint(medium) {
+		margin-top: 3rem;
+	}
+}
+.mt-l {
+	margin-top: 2rem;
+	@include breakpoint(medium) {
+		margin-top: 4rem;
+	}
+}
+.mt-xl {
+	margin-top: 4rem;
+	@include breakpoint(medium) {
+		margin-top: 8rem;
+	}
+}
+
+// ---------------------- PADDING
+
+.pb-s {
+	padding-bottom: 2rem;
+}
+.pb-m {
+	padding-bottom: 1.5rem;
+	@include breakpoint(medium) {
+		padding-bottom: 3rem;
+	}
+}
+.pb-l {
+	padding-bottom: 2rem;
+	@include breakpoint(medium) {
+		padding-bottom: 4rem;
+	}
+}
+.pb-xl {
+	padding-bottom: 4rem;
+	@include breakpoint(medium) {
+		padding-bottom: 7rem;
+	}
+}
+
+.pt-s {
+	padding-top: 2rem;
+}
+.pt-m {
+	padding-top: 3rem;
+}
+.pt-l {
+	padding-top: 2rem;
+	@include breakpoint(medium) {
+		padding-top: 4rem;
+	}
+}
+.pt-xl {
+	padding-top: 4rem;
+	@include breakpoint(medium) {
+		padding-top: 2rem;
+	}
+}

@@ -1,0 +1,40 @@
+// -------------------------------------------- BUTTONS
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-primary;
+	color: #fff;
+	padding: 8px 16px;
+	transition: all 0.2s ease-in;
+
+	&:hover,
+	&:focus {
+		cursor: pointer;
+		color: #fff;
+		background-color: darken($color-primary, 10%);
+	}
+
+	i:before {
+		margin-left: 10px;
+	}
+}
+
+.button--green {
+	background-color: $color-secondary;
+	&:hover {
+		cursor: pointer;
+		background-color: darken($color-secondary, 10%);
+	}
+}
+
+.button--white {
+	color: $color-primary;
+	background-color: #fff;
+	&:hover {
+		cursor: pointer;
+		color: $color-primary;
+		background-color: lighten($color-primary, 55%);
+	}
+}

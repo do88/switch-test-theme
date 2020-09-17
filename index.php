@@ -1,41 +1,32 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- */
+<?php get_header(); ?>
 
-get_header(); ?>
-			
-	<div class="content">
-	
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
-	
-		    <main class="main small-12 medium-8 large-8 cell" role="main">
-		    
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
-				    
-				<?php endwhile; ?>	
+<div class="homepage-banner mb-l">
+	<div class="homepage-banner__content">
+		<h1><?php the_field('banner_title'); ?></h1>
+		<h3><?php the_field('banner_subtitle'); ?></h3>
+		<a href="<?php the_field('banner_button_url'); ?>" class="button button--large">
+			<?php the_field('banner_button_text'); ?>
+		</a>
+	</div>
+	<div class="homepage-banner__media">
+		<?php
+			$image = get_field('banner_image');
+			$size = 'full';
+			echo wp_get_attachment_image( $image, $size );
+		?>
+	</div>
+</div>
 
-					<?php joints_page_navi(); ?>
-					
-				<?php else : ?>
-											
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
-						
-				<?php endif; ?>
-																								
-		    </main> <!-- end #main -->
-		    
-		    <?php get_sidebar(); ?>
-
-		</div> <!-- end #inner-content -->
-
-	</div> <!-- end #content -->
-
+<main class="content">
+	<div class="content__wrapper">
+		<?php if ( have_rows( 'layout' ) ): ?>
+			<?php while ( have_rows( 'layout' ) ) : the_row(); ?>
+				<?php get_template_part( 'parts/two_column_content' ); ?>
+				<?php get_template_part( 'parts/three_column_content' ); ?>
+				<?php get_template_part( 'parts/title_row' ); ?>
+				<?php get_template_part( 'parts/spacer_block' ); ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
+	</div>
+</main>
 <?php get_footer(); ?>
